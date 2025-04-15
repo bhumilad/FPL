@@ -35,7 +35,7 @@ source env/bin/activate
 
 
 ### 5. Download Model & Data
-- Ensure that the trained **PyCaret model** (`fpl_points_predictor3`) is available in the project folder.
+- Ensure that the trained **PyCaret model** (`modeling_withoutForm.ipynb`) is available in the project folder.
 - Ensure that the **dataset** (`final_fpl_data.csv`) is also available in the project folder.
 
 ## How to Run
@@ -47,8 +47,10 @@ streamlit run fpl.py
 ```
 FPL-Streamlit-App/
 │── fpl.py                 # Main Streamlit app
+|── .streamlit/config.toml # css of streamlit
 │── final_fpl_data.csv     # Dataset
-│── fpl_points_predictor3  # Trained PyCaret model
+|── modeling_withoutForm.ipynb # modelling
+│── fpl_points_predictor3.pkl  # Trained PyCaret model
 │── README.md              # Project documentation
 ```
 
@@ -60,7 +62,7 @@ FPL-Streamlit-App/
 - **GitHub** (for version control)
 
 ## Future Improvements
-- Enhance UI with better visualization.
+- Enhance UI with better visualisation.
 - Improve model performance with advanced feature engineering.
 - Integrate real-time FPL data.
 
