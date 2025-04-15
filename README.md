@@ -1,4 +1,4 @@
-# Fantasy Premier League - Best Player Predictor
+# Fantasy Premier League - Best Player Predictor [try our web ☝🏻](https://huggingface.co/spaces/shimona02/FPLPredictor)
 
 This is a **Fantasy Premier League (FPL) Best Player Predictor** web app built using **Streamlit**. The app allows users to filter and select FPL players based on various factors such as position, team, price range, and predicted performance.
 
