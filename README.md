@@ -1,4 +1,4 @@
-# ⚽ Fantasy Premier League (FPL) Player Analytics
+# ⚽ Fantasy Premier League (FPL) Player Analytics [Make a Team](https://huggingface.co/spaces/shimona02/FPLPredictor)
 
 A complete end-to-end data analytics and machine learning project using Fantasy Premier League data to help optimize fantasy team selection, uncover player performance insights, and build predictive models.
 
