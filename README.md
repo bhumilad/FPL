@@ -1,71 +1,107 @@
-# Fantasy Premier League - Best Player Predictor [try our web ☝🏻](https://huggingface.co/spaces/shimona02/FPLPredictor)
+# ⚽ Fantasy Premier League (FPL) Player Analytics
 
-This is a **Fantasy Premier League (FPL) Best Player Predictor** web app built using **Streamlit**. The app allows users to filter and select FPL players based on various factors such as position, team, price range, and predicted performance.
+A complete end-to-end data analytics and machine learning project using Fantasy Premier League data to help optimize fantasy team selection, uncover player performance insights, and build predictive models.
 
-## Features
-- Select players based on position, team, and price range.
-- Predict upcoming event points using a trained **PyCaret regression model**.
-- Enforce FPL constraints (**2 Goalkeepers, 5 Defenders, 5 Midfielders, 3 Forwards**).
-- Display selected players in a separate tab.
-- Reset selections when needed.
+---
 
-## Installation & Setup
+## 📥 Data Acquisition & Cleaning
 
-### 1. Clone the Repository
-```sh
-git clone https://github.com/bhumilad/FPL.git
-or
-Download manually
-```
+- ✅ **Scraping**: Data scraped from the official FPL website (7th October 2024) using `requests` and `BeautifulSoup`.
+- 🧹 **Cleaning**: Removed duplicates, handled nulls, standardized formats.
+- 🏗️ **Feature Engineering**: Derived new features such as:
+  - Points per 90 minutes
+  - Attack/Defense efficiency scores
+  - Form indicators
 
-### 2. Create Virtual Environment
-```sh
-python -m venv env
-```
+---
 
-### 3. Activate Virtual Environment
-#### Windows:
-```sh
-env\Scripts\activate
-```
-#### Mac/Linux:
-```sh
-source env/bin/activate
-```
+## 📊 Analysis & Reporting (Tableau / Power BI)
 
+- 🧠 Created **team and player dashboards** showcasing:
+  - Player rankings by position
+  - Team-wise point distribution
+  - Position-wise performance heatmaps
+- 📌 Built for strategic fantasy decisions and comparisons
 
-### 5. Download Model & Data
-- Ensure that the trained **PyCaret model** (`modeling_withoutForm.ipynb`) is available in the project folder.
-- Ensure that the **dataset** (`final_fpl_data.csv`) is also available in the project folder.
+---
 
-## How to Run
-```sh
-streamlit run fpl.py
-```
+## 📈 EDA & Statistical Testing
 
-## File Structure
-```
-FPL-Streamlit-App/
-│── fpl.py                 # Main Streamlit app
-|── .streamlit/config.toml # css of streamlit
-│── final_fpl_data.csv     # Dataset
-|── modeling_withoutForm.ipynb # modelling
-│── fpl_points_predictor3.pkl  # Trained PyCaret model
-│── README.md              # Project documentation
-```
+- 📉 **Trend Analysis**:
+  - Season-wise points, performance over time
+  - Position & team-based trends
+- 📊 **Correlation & Outlier Detection**
+- 🧪 **Statistical Tests**:
+  - ANOVA: To analyze variance across multiple positions
+  - T-Test: To compare top-tier vs mid-tier players
+  - Chi-square: For categorical dependencies
+  - Mutual Information: For feature relevance
 
-## Technologies Used
-- **Python**
-- **Streamlit** (for web UI)
-- **Pandas** (for data manipulation)
-- **PyCaret** (for machine learning predictions)
-- **GitHub** (for version control)
+---
 
-## Future Improvements
-- Enhance UI with better visualisation.
-- Improve model performance with advanced feature engineering.
-- Integrate real-time FPL data.
+## 🧬 Feature Selection
 
-## License
-This project is open-source and available under the MIT License.
+- 🧪 **Filter Methods**: Correlation, Variance Threshold
+- 🔁 **Wrapper Methods**: Recursive Feature Elimination (RFE)
+- 🧩 **Embedded Methods**: Feature importance from tree-based models
 
+---
+
+## 🤖 Modeling
+
+- 🚀 **Baseline Models**:
+  - Linear Regression
+  - Decision Tree
+  - K-Nearest Neighbors
+- 💡 **Advanced Modeling (via PyCaret)**:
+  - Random Forest
+  - XGBoost
+  - Ensemble Models
+
+---
+
+## 🎯 Hyperparameter Tuning
+
+- Applied **GridSearchCV** and **PyCaret’s AutoML** features for optimal parameters.
+- Evaluated models using metrics like R², RMSE, MAE across training and validation sets.
+
+---
+
+## 🌐 Web Development & Hosting
+
+- Built an interactive web app using **Streamlit** for:
+  - Player selection predictions
+  - Position-wise comparison
+  - Model summary and insights
+- [Optional: Add a deployment link if hosted]
+
+---
+
+## 🔄 Next Steps
+
+- Automate weekly data scraping and model updates
+- Add team formation recommender system
+
+---
+
+## ✅ Conclusion
+
+This project demonstrates a **full data pipeline** — from scraping raw data to statistical analysis, ML modeling, and visualization. It combines both **technical expertise and domain knowledge** in football analytics to provide actionable insights.
+
+---
+
+## 🎯 Who Will Benefit
+
+- 📈 **Fantasy Premier League Managers**: For smarter weekly picks
+- ⚽ **Football Enthusiasts**: To understand player performance
+- 🧪 **Data Science Recruiters**: Demonstrates end-to-end project lifecycle
+- 🏢 **Sports Analytics Firms**: A strong sample for predictive analytics in sports
+
+---
+
+### 🔗 Connect with me
+
+- GitHub: [github.com/bhumilad](https://github.com/bhumilad)
+- LinkedIn: [linkedin.com/in/lad-bhumi/](https://www.linkedin.com/in/lad-bhumi/)
+
+---
